@@ -87,3 +87,26 @@ export function DrawerDemo({ open, onOpenChange }: {
     </Drawer>
   )
 }
+
+export default function ContactPage() {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+        <p className="text-gray-600 mb-8">Get in touch with our team. We'd love to hear from you!</p>
+
+        <Button
+          onClick={() => setOpen(true)}
+          className="bg-[#456DAE] text-white hover:bg-[#3a5d9a]"
+        >
+          Open Contact Form
+        </Button>
+
+        <DrawerDemo open={open} onOpenChange={setOpen} />
+      </div>
+    </div>
+  )
+}
+
