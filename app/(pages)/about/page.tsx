@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import { StaticImageData } from 'next/image'
 import card from "../../../Project photos/card 1.jpg"
 import sea from "../../../Project photos/card 2.jpg"
 import station from "../../../Project photos/card 3.jpg"
 import bridge from "../../../Project photos/card 4.jpg"
 import team from "../../../Project photos/team.jpg"
-import { ReactNode, StaticImageData } from 'react'
+import { ReactNode } from 'react'
 
 const cards: { title: string; emoji: string; image: StaticImageData; imageClass?: string; custom: ReactNode }[] = [
   {
