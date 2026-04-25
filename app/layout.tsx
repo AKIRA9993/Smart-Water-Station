@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 //@ts-ignore
 import "./globals.css";
-import Navbar from "@/_components/fixed-components/NavBar/navbar";
-import Footer from "@/_components/fixed-components/footer/footer";
-import SideBar from "@/_components/fixed-components/SideBar/SideBar";
-import { SidebarInset, SidebarProvider } from "../_components/ui/sidebar";
-import { DrawerDemo } from "./(pages)/contact/page";
+import RootLayoutClient from "./root-layout-client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,15 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider defaultOpen={false}>
-          <SideBar />
-          <SidebarInset>
-            <Navbar />
-            {children}
-            <Footer />
-           
-          </SidebarInset>
-        </SidebarProvider>
+        <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>
   );

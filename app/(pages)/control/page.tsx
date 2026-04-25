@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import PageHeader from "@/_components/fixed-components/PageHeader/PageHeader"
 import {
   Field,
   FieldContent,
@@ -17,7 +18,9 @@ export default function Control() {
   const [mode, setMode] = useState("ai")
 
   return (
-    <div className="px-4 sm:px-10 lg:px-20">
+    <>
+      <PageHeader />
+      <div className="px-4 sm:px-10 lg:px-20">
 
       {/* header */}
       <div className="mt-8">
@@ -114,6 +117,8 @@ export default function Control() {
         </Card>
 
       </div>
-    </div>
+
+      </div>
+    </>
   )
 }

@@ -7,7 +7,7 @@ export default function Footer() {
   const [open, setOpen] = useState(false)
 
   return (
-    <footer className="bg-blue-950 rounded-base shadow-xs border border-default pt-6 mt-6">
+    <footer className="w-full bg-blue-950 rounded-base shadow-xs border border-default pt-6">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link href="/" className="flex items-center mb-4 sm:mb-0">

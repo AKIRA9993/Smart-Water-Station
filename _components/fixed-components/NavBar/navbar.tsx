@@ -3,11 +3,13 @@ import logo from "../../../Project photos/logo.png"
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Beaker, Bell, Cpu, Gauge, Home, LogIn, Microscope, Waves } from "lucide-react";
+import { Beaker, Bell, Cpu, Gauge, Home, LogIn, Microscope, Waves, Grid3X3 } from "lucide-react";
 import { SidebarTrigger } from "@/_components/ui/sidebar";
+
 // navbar items & icons & links
 const navItems = [
   { label: "Home", href: "/", icon: Home },
+  { label: "Main Analytics", href: "/home", icon: Waves },
   { label: "Sensors", href: "/sensors", icon: Waves },
   { label: "Control", href: "/control", icon: Gauge },
   { label: "Ai", href: "/ai", icon: Cpu },
@@ -24,10 +26,10 @@ export default function Navbar() {
     <>
       <SidebarTrigger className="fixed top-3 left-3 z-50 text-white hover:bg-white/15 md:hidden" />
 
-      <header className="sticky top-0 z-50 hidden border-b border-white/20 bg-[#6f89b8]/95 backdrop-blur md:block">
-        <nav className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:gap-8 sm:px-6">
-          <SidebarTrigger className="text-white hover:bg-white/15" />
-          <Link href="/" className="mr-4 flex shrink-0 items-center sm:mr-8">
+      <header className="sticky top-0 z-50 border-b border-white/20 bg-[#6f89b8]/95 backdrop-blur">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center gap-2 px-4 sm:gap-4 sm:px-6">
+          <SidebarTrigger className="text-white hover:bg-white/15 hidden md:flex" />
+          <Link href="/" className="mr-2 flex shrink-0 items-center sm:mr-4">
             <Image
               src={logo}
               alt="SmarterWater"
@@ -38,7 +40,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="no-scrollbar flex min-w-0 flex-1 items-center justify-start gap-3 overflow-x-auto py-2 sm:justify-center sm:gap-4 lg:gap-6">
+          <div className="no-scrollbar flex min-w-0 flex-1 items-center justify-start gap-2 overflow-x-auto py-2 sm:justify-center sm:gap-2 lg:gap-3">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.href;
@@ -47,16 +49,19 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`inline-flex shrink-0 items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold transition ${
+                  className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-1.5 text-xs sm:text-sm font-semibold transition ${
                     isActive ? "bg-blue-900 text-[#4f74b6]" : "text-white hover:bg-white/15"
                   }`}
                 >
                   <Icon className="h-3.5 w-3.5" />
-                  {item.label}
+                  <span className="hidden sm:inline">{item.label}</span>
                 </Link>
               );
             })}
           </div>
+
+          {/* Dashboard Toggle Button */}
+          <SidebarTrigger className="ml-auto p-2 rounded-lg text-white hover:bg-white/15 transition-colors" />
         </nav>
       </header>
     </>

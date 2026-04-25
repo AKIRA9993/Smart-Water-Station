@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   Atom, ChartBarStacked, ChartNoAxesCombined, Flower, WindArrowDown,
 } from "lucide-react";
+import PageHeader from "@/_components/fixed-components/PageHeader/PageHeader";
 import { TrendingUp } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import {
@@ -157,6 +158,7 @@ export default function Sensors() {
 
   return (
     <>
+      <PageHeader />
       {/* header */}
       <div>
         <h1 className="text-3xl font-bold mx-20 mt-10 pb-2 text-[#456DAE]">

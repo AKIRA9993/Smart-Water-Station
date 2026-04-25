@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import PageHeader from "@/_components/fixed-components/PageHeader/PageHeader";
 import { Root, SensorData } from "@/Interfaces/FullStatesPrototypeInterface";
 
 type ConnectionMode = "API" | "Serial" | "Simulation";
@@ -130,10 +131,12 @@ export default function Prototype() {
   // RENDER
   // ============================================
   return (
-    <section
-      className="min-h-screen px-5 py-10"
-      style={{ background: "linear-gradient(135deg, #cfd9f7 0%, #d8dff9 100%)" }}
-    >
+    <>
+      <PageHeader />
+      <section
+        className="min-h-screen px-5 py-10"
+        style={{ background: "linear-gradient(135deg, #cfd9f7 0%, #d8dff9 100%)" }}
+      >
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -287,5 +290,6 @@ export default function Prototype() {
 
       </div>
     </section>
+    </>
   );
 }
