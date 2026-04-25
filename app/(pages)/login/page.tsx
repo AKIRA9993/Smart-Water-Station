@@ -14,7 +14,7 @@ export default function LoginPage() {
                 type="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2" 
-                style={{ focusRing: '2px solid #4169b3' }}
+                
               />
             </div>
             
@@ -25,7 +25,7 @@ export default function LoginPage() {
                 type="password"
                 placeholder="Enter your password"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
-                style={{ focusRing: '2px solid #4169b3' }}
+                
               />
             </div>
             
