@@ -123,10 +123,7 @@ const cards: { title: string; emoji: string; image: StaticImageData; imageClass?
           <span>💻</span>
           <div><span className="font-semibold text-white">Nourhan Fathallah</span> — Web Developer (Front-end)</div>
         </div>
-        <div className="flex items-start gap-2">
-          <span>🎨</span>
-          <div><span className="font-semibold text-white">Doha & Omar</span> — UI/UX Designers</div>
-        </div>
+        
         <div className="flex items-start gap-2">
           <span>🔧</span>
           <div><span className="font-semibold text-white">Mahmoud & Eslam</span> — Embedded Systems</div>
@@ -138,6 +135,10 @@ const cards: { title: string; emoji: string; image: StaticImageData; imageClass?
         <div className="flex items-start gap-2">
           <span>🌐</span>
           <div><span className="font-semibold text-white">Ahmed Elmenofy & Fathy</span> — Network</div>
+        </div>
+        <div className="flex items-start gap-2">
+          <span>🎨</span>
+          <div><span className="font-semibold text-white">Doha & Omar</span> — UI/UX Designers</div>
         </div>
         <div className="flex items-start gap-2">
           <span>⚗️</span>
